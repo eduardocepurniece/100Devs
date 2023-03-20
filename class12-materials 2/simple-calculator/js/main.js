@@ -1,26 +1,26 @@
-let total = 0
+let total = 0;
 
-document.querySelector('#pumpkin').addEventListener('click', makeZero)
-document.querySelector('#dominosPizza').addEventListener('click', jumanji)
-document.querySelector('#zebra').addEventListener('click', add9)
-document.querySelector('#cantThinkOfAnything').addEventListener('click', sub2)
+document.getElementById('pumpkin').addEventListener('click', resetToZero);
+document.getElementById('dominosPizza').addEventListener('click',addThree);
+document.getElementById('zebra').addEventListener('click', addNine);
+document.getElementById('cantThinkOfAnything').addEventListener('click', withdrawTwo);
 
-function makeZero() {
-  total = 0
-  document.querySelector('#placeToPutResult').innerText = total
+function resetToZero(){
+  total = 0;
+  document.querySelector('#placeToPutResult').innerText = total;
 }
 
-function jumanji() {
-  total = total + 3
-  document.querySelector('#placeToPutResult').innerText = total
+function addThree(){
+  total += 3;
+  document.querySelector('#placeToPutResult').innerHTML = total;
 }
 
-function add9() {
-  total = total + 9
-  document.querySelector('#placeToPutResult').innerHTML = total
+function addNine(){
+  total += 9;
+  document.querySelector('#placeToPutResult').innerHTML = total;
 }
 
-function sub2() {
-  total = total - 2
-  document.querySelector('#placeToPutResult').innerHTML = total
+function withdrawTwo(){
+  total -= 2;
+  document.querySelector('#placeToPutResult').innerHTML = total;
 }
