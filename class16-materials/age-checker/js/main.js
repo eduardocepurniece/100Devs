@@ -11,3 +11,25 @@
 //On click of the h1
 //Take the value from the input
 //Place the result of the conditional in the paragraph
+
+
+document.querySelector('h1').addEventListener('click', checkAge);
+
+function checkAge(){
+    const age = parseInt(document.querySelector('#danceDanceRevolution').value);
+    document.querySelector('p').innerHTML = '';
+
+    if(age < 16){
+        document.querySelector('p').innerHTML = 'they can not drive';
+    } else if(age < 18){
+        document.querySelector('p').innerHTML = 'they can\'t hate from outside the club, because they can\'t even get in';
+    } else if(age < 21){
+        document.querySelector('p').innerHTML = 'they can not drink';
+    } else if(age < 25){
+        document.querySelector('p').innerHTML = 'they can not rent cars affordably';
+    } else if(age < 30){
+        document.querySelector('p').innerHTML = 'they can not rent fancy cars affordably';
+    } else if(age > 30){
+        document.querySelector('p').innerHTML = 'there is nothing left to look forward too';
+    }
+}
