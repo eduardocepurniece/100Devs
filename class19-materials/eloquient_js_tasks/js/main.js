@@ -1,48 +1,31 @@
-// *Variables*
-// Declare a variable, assign it a boolean, and alert the value
-let bool = true;
-alert(bool);
+//The sum of a range
+/*Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.*/
 
-// Declare a variable, reassign it to your favorite color, and console log the value
-let colorHaki = 'red';
-colorHaki = 'green';
+/*As a bonus assignment, modify your range function to take an optional third argument that indicates the “step” value used when building the array*/
 
-// *Functions*
-// Create a function that takes in 4 numbers and returns the sum of the first 3 numbers divided by the fourth. Return the result. Call the function.
-function divideAndConquer(n1, n2, n3, n4){
-    return (n1+ n2 + n3) / n4;
-}
-console.log(divideAndConquer(10, 20, 30, 5));
-
-// Create a function that takes in 2 numbers. Console log the first number to the power of the second. Call the function.
-function pow(n1, n2){
-    return Math.pow(n1, n2);
-}
-
-console.log(pow(10, 2));
-
-// *Conditionals*
-// Create a function that takes in a boolean and a string. If the boolean is true, alert the string. If the boolean is false, console log the string
-function theHunt(m,x){
-    m ? alert(x) : console.log(x);
-}
-
-theHunt(true, 'barbarian');
-
-//*Loops*
-//Create a function that takes in a number. Console log all values from 1 to that number, but if the number is divisible by 3 log "fizz" instead of that number, if the number is divisible by 5 log "buzz" instead of the number, and if the number is divisible by 3 and 5 log "fizzbuzz" instead of that number
-function fizzBuzz(n){
-    for(let i = 1; i <= n; i++){
-        if(i % 3 === 0 && i % 5 === 0){
-            console.log('FizzBuzz');
-        } else if(i % 3 === 0){
-            console.log('Fizz');
-        } else if(i % 5 === 0){
-            console.log('Buzz');
-        }else{
-            console.log(i);
-        }
+function range(n1, n2, step){
+    let numsArray = [];
+    for(let i = n1; i <= n2; i += step){
+        numsArray.push(i);
     }
 }
 
-fizzBuzz(20);
+/*Next, write a sum function that takes an array of numbers and returns the sum of these numbers. */
+
+function sum(arr){
+    return arr.reduce((acc, curr) => acc + curr);
+}
+
+//Reversing an array
+/*write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its elements. Neither may use the standard reverse method.*/
+
+function resverseArr(arr){
+    let reversedArr = [];
+    arr.forEach(element => {
+        reversedArr.unshift(element);
+    });
+    return reversedArr;
+}
+console.log(resverseArr([1,2,3,4,5]));
+
+
