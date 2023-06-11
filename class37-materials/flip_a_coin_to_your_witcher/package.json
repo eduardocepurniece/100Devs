@@ -1,0 +1,11 @@
+{
+  "name": "flip_a_coin_to_your_witcher",
+  "version": "1.0.0",
+  "description": "App that flips a coin server side",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Ventura",
+  "license": "ISC"
+}
